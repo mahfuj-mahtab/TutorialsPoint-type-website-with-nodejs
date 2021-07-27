@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="/admin/admin.css">
+
+</head>
+<body>
+
+
+
+    <div class="header"></div>
+    <div class="container">
+        <div class="leftContainer">
+            <h1>codingforbaby</h1>
+            <ul>
+                <li><a  href="">Dashboard</a></li>
+                <li class="extraPosts"><a class="active" href="">Posts</a>
+                <div class="postsHover">
+                    <ul>
+                        <li><a class="active" href="">Add Post</a></li>
+                        <li><a href="/admin/showposts">Show Posts</a></li>
+                        <li><a href="">Category</a></li>
+                    </ul>
+                </div>
+                
+                </li>
+                <li class="extraUsers"><a href="">Users</a>
+                
+                    <div class="usersHover">
+                        <ul>
+                            <li><a href="">Add User</a></li>
+                            <li><a href="/admin/showusers">Show Users</a></li>
+                            <!-- <li><a href="">Category</a></li> -->
+                        </ul>
+                    </div>
+                
+                </li>
+                <li><a href="">Settings</a></li>
+                <!-- <li><a href="">Dashboard</a></li> -->
+                <!-- <li><a href="">Dashboard</a></li> -->
+            </ul>
+        </div>
+        <div class="rightContainer">
+            <form action="/addCat" method="POST" enctype="multipart/form-data">
+                <h3 class="postTitleH3">Category Name</h3>
+                <input type="text" name="category" id="" placeholder="Add Category Name">
+                
+                <h3 class="postTitleH3">Course Logo</h3>
+                <input type="file" name="catLogo"><br>
+                <h3 class="postTitleH3">Course Banner</h3>
+                <input type="file" name="catBanner"> <br>
+                <input class="submit" type="submit" value="Add Course Category">
+                </form> 
+                <br><br><br><br>
+                <table>
+                    <tr>
+                        <th>Category name</th>
+                        <th>Action</th>
+                    </tr>
+                    <% catResults.forEach((catResult)=>{ %>
+
+                        <tr>
+                            <td><%= catResult.catName %></td>
+                            <td><a href="/admin/catedit/<%= catResult._id %>">Edit</a> <a href="/admin/catdelete/<%= catResult._id %>">Delete</a></td>
+                        </tr>
+                  <%  }) %>
+                </table>
+        </div>
+    </div>
+</body>
+</html>

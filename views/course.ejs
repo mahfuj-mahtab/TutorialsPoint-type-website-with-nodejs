@@ -1,0 +1,45 @@
+<%- include('components/Header'); -%>
+
+<div class="courseSection">
+    <div class="leftCourseSection">
+        <div class="courseLogoSection">
+        <img class="courseLogo" src="/uploads/<%= catResults.catLogo %>" alt="">
+    </div>
+            <h2 class="courseTitle"><%= catResults.catName %></h2>
+        <ul>
+            <% allPostResults.forEach((result)=>{ %>
+
+                <li><a href="/course/<%= result.catName.replace(/\s+/g, '-') %>/<%= result.title.replace(/\s+/g, '-') %>"><i class="fas fa-arrow-right"></i><%= result.title %></a></li>
+           <% }) %>
+            
+        </ul>
+    
+    </div>
+    <div class="middleCourseSection">
+        <!-- <h3 class="show">Show Lecture</h3> -->
+        <img src="/uploads/<%= catResults.catBanner %>" class="courseBanner" alt="">
+        <div>
+            <%- singlePostResults.body %>
+
+        </div>
+    </div>
+    <div class="rightCourseSection"></div>
+</div>
+
+<script>
+//     const l = document.querySelector(".leftCourseSection");
+//   const s = document.querySelector(".fa-align-justify");
+//     s.addEventListener('click',()=>{
+        
+//         l.classList.toggle("visible");
+//     })
+
+    const d = document.querySelector(".right_bottom_header");
+  const e = document.querySelector(".fa-align-justify");
+    e.addEventListener('click',()=>{
+       
+        d.classList.toggle("visible");
+    })
+</script>
+
+<%- include('components/Footer'); -%>

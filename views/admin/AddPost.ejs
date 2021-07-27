@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script> -->
+    <!-- <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>  -->
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <!-- <script src="/node_modules/ckeditor4/ckeditor.js"></script> -->
+    <!-- <script src="/node_modules/ckeditor4/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="/node_modules/ckeditor4/plugins/codesnippet/lib/highlight/styles/default.css"> -->
+    
+
+
+    <link rel="stylesheet" href="/admin/admin.css">
+
+</head>
+<body>
+
+
+
+    <div class="header"></div>
+    <div class="container">
+        <div class="leftContainer">
+            <h1>codingforbaby</h1>
+            <ul>
+                <li><a  href="">Dashboard</a></li>
+                <li class="extraPosts"><a class="active" href="">Posts</a>
+                <div class="postsHover">
+                    <ul>
+                        <li><a class="active" href="">Add Post</a></li>
+                        <li><a href="/admin/showposts">Show Posts</a></li>
+                        <li><a href="/admin/addcategory">Category</a></li>
+                    </ul>
+                </div>
+                
+                </li>
+                <li class="extraUsers"><a href="">Users</a>
+                
+                    <div class="usersHover">
+                        <ul>
+                            <li><a href="">Add User</a></li>
+                            <li><a href="/admin/showusers">Show Users</a></li>
+                            <!-- <li><a href="">Category</a></li> -->
+                        </ul>
+                    </div>
+                
+                </li>
+                <li><a href="">Settings</a></li>
+                <!-- <li><a href="">Dashboard</a></li> -->
+                <!-- <li><a href="">Dashboard</a></li> -->
+            </ul>
+        </div>
+        <div class="rightContainer">
+            <form action="/addPost" method="POST">
+                <h3 class="postTitleH3">Post Title</h3>
+                <input type="text" name="postTitle" id="">
+                <h3 class="postBodyH3">Post Body</h3>
+
+                <div class="textarea">
+                    <textarea name="postBody"  id="editor1"  ></textarea>
+                    <!-- <textarea name="editor1"></textarea> -->
+            
+                </div>
+                <h3 class="postTitleH3">Post Category</h3>
+                <select class="categorySelect" name="catSelector" id="" selected>
+                    <option selected>None</option>
+                    <% results.forEach((result)=>{ %>
+
+                        <option value="<%= result.catName %>"><%= result.catName %></option>
+                   <% }) %>
+                    
+                </select>
+                <br>
+                <!-- <h3 class="postTitleH3">Post Logo</h3>
+                <input type="file" name="postLogo"><br>
+                <h3 class="postTitleH3">Post Banner</h3>
+                <input type="file" name="postBanner"> -->
+                <input type="submit" value="Post" class="submit">
+                </form> 
+        </div>
+    </div>
+    
+
+    <!-- <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor1' ),{
+                image: {
+            toolbar: [ 'toggleImageCaption', 'imageTextAlternative' ]
+        }
+            } )
+            .catch( error => {
+                console.error( error );
+            } ); -->
+    </script>
+    <!-- <script>editor.initHighlightingOnLoad();</script> -->
+
+
+    <script>
+        CKEDITOR.replace( 'editor1' );
+        
+</script>
+<!-- <script>editor.initHighlightingOnLoad();</script> -->
+
+</body>
+</html>

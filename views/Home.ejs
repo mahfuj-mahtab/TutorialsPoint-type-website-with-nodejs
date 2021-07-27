@@ -1,0 +1,61 @@
+<%- include('components/Header'); -%>
+<div class="banner">
+    <div class="leftbanner">
+        <h1 class="bannerH1">Welcome To Coding For Baby</h1>
+        <h3 class="bannerH3">You want to learn programming? But you dont know from where to start? then .....</h3>
+        <a class="bannerA" href="#explore">Explore The Course</a>
+
+
+    </div>
+    <div class="rightbanner">
+        <!-- <a href="https://www.vectorstock.com/royalty-free-vector/flat-design-modern-icons-set-website-seo-vector-29940689">Vector image by VectorStock / Robot</a> -->
+
+        <!-- <a href='https://www.freepik.com/vectors/technology'>Technology vector created by stories - www.freepik.com</a> -->
+        <img class="bannerImg" src="img/banner3.png" alt="">
+
+    </div>
+</div>
+
+<div id="explore" class="exploreArticleCourse">
+    <h1 class="exploreArticleCourseH1">Explore Our Article Based Course</h1>
+    
+    <% results.forEach((result)=>{ %>
+
+        <div class="course">
+            <img src="/uploads/<%= result.catLogo %>" alt="" class="courseImg">
+            <!-- <p class="courseSigned">Article Based</p> -->
+            <h3 class="courseH3"><%= result.catName %></h3>
+          
+                <h4 class="totalPost">Running <br> Course </h4>
+        
+            
+            <h4 class="courseLevel">Course Level <br> Beginner</h4>
+            <a href="/course/<%= result.catName.replace(/\s+/g,'-') %>" class="courseLink">Learn Now</a>
+        </div>  
+   <% }); %>
+
+
+
+
+
+
+
+    
+
+
+
+</div>
+
+
+
+
+
+<script>
+    const d = document.querySelector(".right_bottom_header");
+  const e = document.querySelector(".fa-align-justify");
+    e.addEventListener('click',()=>{
+        d.classList.toggle("visible");
+    })
+</script>
+
+<%- include('components/Footer'); -%>

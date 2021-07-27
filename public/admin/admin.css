@@ -1,0 +1,234 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background: #F5F5F5;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    background: #0394DD;
+    position: fixed;
+    z-index: 10;
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+.active{
+    background-color: #0394DD;
+    color: white;
+    
+}
+.leftContainer{
+    width: 20%;
+    height: 700px;
+    float: left;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: fixed;
+    top: 40px;
+}
+.leftContainer h1{
+    width: 80%;
+    margin: auto;
+    height: 60px;
+    line-height: 60px; 
+    font-size: 29px;
+    text-transform: capitalize;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.leftContainer ul{
+    list-style: none;
+    margin-left: 30px;
+}
+.leftContainer ul li{
+    width: 200px;
+    height: 40PX;
+    line-height: 40px;
+    /* border: 1px solid red; */
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.leftContainer ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 10px;
+    width: 190px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    height: 40px;
+    display: inline-block;
+    color: black;
+}
+.leftContainer ul li a:hover{
+    background: #0394DD;
+    color: white;
+}
+
+.postsHover{
+    width: 190px;
+    height: 170px;
+    margin-left: 170px;
+    margin-top: -50px;
+    display: none;
+    background: #0394DD;
+    border-radius: 5px;
+
+
+}
+.postsHover ul{
+    list-style: none;
+    padding-left: 30px;
+}
+.postsHover ul li{
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    margin-left: -30px;
+    padding-left: 0px;  
+    /* border: 1/px solid red; */
+    margin-top: 10px;
+}
+.postsHover ul li a{
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+}
+.extraPosts:hover .postsHover{
+    display: block;
+    position: fixed;
+    z-index: 10;
+}
+
+
+
+
+
+.usersHover{
+    width: 190px;
+    height: 120px;
+    margin-left: 170px;
+    margin-top: -50px;
+    display: none;
+    background: #0394DD;
+    border-radius: 5px;
+
+}
+.usersHover ul{
+    list-style: none;
+    padding-left: 30px;
+}
+.usersHover ul li{
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    margin-left: -30px;
+    padding-left: 0px;  
+    /* border: 1/px solid red; */
+    margin-top: 10px;
+}
+.usersHover ul li a{
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+}
+.extraUsers:hover .usersHover{
+    display: block;
+}
+.rightContainer{
+    height: 3000px;
+    position: absolute;
+    margin-left: 350px;
+    /* margin-top: 30px; */
+    top: 50px;
+}
+.rightContainer ul{
+    list-style: none;
+
+}
+.rightContainer ul li{
+    width: 250px;
+    height: 150px;
+    float: left;
+    /* border: 1px solid red; */
+    background: white;
+    color: red;
+    margin-right: 40px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.textarea{
+    width: 700px;
+    height: auto;
+
+}
+
+.postTitleH3{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.rightContainer input[type="text"]{
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    margin-bottom: 10px;
+}
+.postBodyH3{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.categorySelect{
+    width: 140px;
+    height: 30px;
+    border-radius: 6px;
+}
+.submit{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+    background: #0394DD;
+    border: 1px solid #0394DD;
+    color: white;
+}
+th{
+    width: 180px;
+    height: auto;
+    line-height: 30px;
+    margin: 10px;
+    border: 2px solid black;
+}
+td{
+    width: 180px;
+    height: auto;
+    /* line-height: 30px; */
+    /* margin: 10px; */
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 3px;
+    text-align: justify;
+}
+td a{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+}

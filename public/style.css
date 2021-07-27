@@ -1,0 +1,17 @@
+body{
+    background: #03203C;
+    color: white;
+    padding-top: 10%;
+}
+a{
+    color: white;
+    text-decoration: none;
+    width: auto;
+    height: 30px;
+    padding-top: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* margin-bottom: 5px; */
+    display: inline-block;
+    border: 1px solid white;
+}
